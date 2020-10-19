@@ -1,0 +1,113 @@
+@import './_variables';
+
+.repository {
+  .repository--border {
+    border-left: 3px solid  $borderColor;
+    height: 100%;
+  }
+
+  box-shadow: 0 0px 4px 0 $boxShadowColor;
+  height: 5rem;
+  width: 16rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+  }
+
+  .caption {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .repository--description {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    p {
+      font-size: 0.8rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .repository-star {
+    color: $starColor;
+    display: flex;
+    flex-flow: row;
+    width: 3rem;
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+
+    img {
+      height: 1.125rem;
+      width: 1rem;
+    }
+  }
+}
+
+.repository--topRepositories {
+  box-shadow: 0 0px 4px 0 $boxShadowColor;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  .repository--border {
+    width: 12.5rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    overflow-wrap: break-word;
+    max-width: 10rem;
+  }
+
+  .repository-star {
+    color: $starColor;
+    display: flex;
+    flex-flow: row;
+    width: 4rem;
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+
+    img {
+      height: 1.125rem;
+      width: 1rem;
+    }
+  }
+}

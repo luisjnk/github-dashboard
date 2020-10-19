@@ -1,0 +1,79 @@
+@import '_variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: $background;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $bodyColor;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    border-top: 5rem solid $primaryDark;
+    align-items: center;
+  }
+
+  .container {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .heading {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  .title {
+    margin-bottom: 50px;
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+  }
+  
+  @media screen and (max-width: 1048px) {
+    .toprepositories {
+      width: 900px;
+      height: 426px;  
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px $boxShadowColor;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .card {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .container {
+      width: 100%;
+    }
+  
+    .heading {
+      padding: 20px;
+      font-size: 20px;
+    }
+  
+    .card {
+      width: 80%;
+    }
+  }
+  

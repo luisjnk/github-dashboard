@@ -1,0 +1,54 @@
+@import './_variables';
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #384359;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.container--loader {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+}
+
+.EmptyTable {
+  border: 1px solid white;
+  border-top: none;
+  /* stylelint-disable-next-line */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem 1.5rem;
+  background-color: white;
+  width: 100%;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

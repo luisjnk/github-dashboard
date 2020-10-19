@@ -1,0 +1,151 @@
+@import "./_variables";
+
+.card {
+  width: 18.875rem;
+  height: 20rem;
+  background: $background;
+  border: 1px solid $borderColor;
+  margin-bottom: 3rem;
+  transition: 0.3s;
+  margin-right: 2rem;
+  position: relative;
+
+  .card-header {
+    height: 15%;
+    text-align: center;
+    background: linear-gradient(to right, $primaryDark, $primaryDark);
+    color: #fff;
+  }
+
+  .image--header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: $imageHeaderColor;
+  }
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  height: 16rem;
+  justify-content: space-evenly;
+
+  .image--avatar {
+    margin-top: -32px;
+    border-radius: 50%;
+    width: 4rem;
+  }
+
+  .vertice-card-body {
+    border-top: 1px solid $borderColor;
+    width: 80%;
+  }
+
+  span:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.card .card-body .card-followers {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: space-between;
+  font-size: 0.8rem;
+
+  img {
+    height: 1.125rem;
+    width: 1rem;
+  }
+
+  span:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px $boxShadowColor;
+  background: linear-gradient(to right, $primaryDark, $primaryDark);
+  color: $white;
+  .image--header {
+    opacity: 0.1;
+  }
+
+  .follower-icon {
+    fill: white;
+  }
+
+  .btn {
+    border: 2px solid black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    outline: none;
+    opacity: 0.8;
+  }
+
+  .success {
+    border-color: $white;
+    color: $white;
+  }
+
+  .success:hover {
+    background-color: $primaryDark;
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 1048px) {
+  .card-header {
+    height: 15%;
+    text-align: center;
+    background: linear-gradient(to right, $primaryDark, $primaryDark);
+    color: $white;
+  }
+
+  .card-body {
+    padding: 2rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .image--avatar {
+    margin-top: -5rem;
+    border-radius: 5rem;
+    width: 4rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 100%;
+  }
+
+  .heading {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 80%;
+  }
+}

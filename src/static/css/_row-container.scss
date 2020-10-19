@@ -1,0 +1,18 @@
+.row--container {
+  width: 1080px;
+  height: 426px;
+}
+
+@media screen and (max-width: 1080px) {
+  .row--container {
+    width: 44rem;
+    height: 50rem;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .row--container {
+    width: 25rem;
+    height: 75rem;
+  }
+}
